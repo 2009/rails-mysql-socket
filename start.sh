@@ -23,7 +23,7 @@ fi
 
 # Start the second process
 socat \
-  UNIX-LISTEN:/tmp/mysqld.sock,fork,reuseaddr,unlink-early,mode=777 \
+  UNIX-LISTEN:/tmp/mysql.sock,fork,reuseaddr,unlink-early,mode=777 \
   TCP:db:3306 &
 
 status=$?
